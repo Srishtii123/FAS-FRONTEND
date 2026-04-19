@@ -359,6 +359,7 @@ const AttendancePage = () => {
       let response;
 
       if (viewMode === 'full-month') {
+        //const fullMonthData = await attendanceServiceInstance. getMonthlyStats   getFullMonthAttendanceRecords(dateRange);
         const fullMonthData = await attendanceServiceInstance.getFullMonthAttendanceRecords(dateRange);
         response = {
           data: fullMonthData.data,
