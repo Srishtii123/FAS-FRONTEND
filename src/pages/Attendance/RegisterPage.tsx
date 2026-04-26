@@ -9,7 +9,6 @@ const RegisterPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-
   const columnDefs = useMemo<ColDef[]>(
     () => [
       {

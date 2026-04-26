@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+//import { lazy } from 'react';
 //import React from 'react';
 //import { useQuery } from '@tanstack/react-query';
 //import useAuth from 'hooks/useAuth';
@@ -17,8 +17,8 @@ import { lazy } from 'react';
 //import VendorRegister from 'pages/VendorSystem/VendorRegister';
 // import VendorStatus from 'pages/VendorSystem/VendorStatus'
 // import VendorStatus from 'pages/VendorSystem/VendorStatus';
- import Loadable from 'components/Loadable';
- import CommonLayout from 'layout/CommonLayout';
+ //import Loadable from 'components/Loadable';
+ //import CommonLayout from 'layout/CommonLayout';
  import MainLayout from 'layout/MainLayout';
  import AppSelectionPage from 'pages/AppSelection/AppSelectionPage';
 // import AcTreeFinancePage from 'pages/Finance/AcTreeFinancePage';
@@ -145,10 +145,10 @@ import AuthGuard from 'utils/route-guard/AuthGuard';
  import QueryMasterPage from 'pages/Security/QueryMasterPage';
  import ScreenAccessPage from 'pages/Security/ScreenAccessPage';
 import RoleAccessPage from 'pages/Security/UserRoleAccessPage';
-import AccessAssignRollPage from 'pages/Security/AccessAssignRollPage';
+//import AccessAssignRollPage from 'pages/Security/AccessAssignRollPage';
 import AccessAssignUserPage from 'pages/Security/AccessAssignUserPage';
 import UserDivisionAccessPage from 'pages/Security/UserDivisionAccessPage';
-import Report from 'pages/Security/ReportMasterPage';
+//import Report from 'pages/Security/ReportMasterPage';
 import SecrollmasterWmsPage from 'pages/Security/SecrollmasterWmsPage';
  import FlowmasterSecPage from 'pages/Security/flowmaster-sec.types';
  import SecmasterWmsPage from 'pages/Security/secmasterWmsPage';
@@ -564,7 +564,7 @@ const MainRoutes = {
                     { path: 'sec_module_data', element: <SecmodulemasterWmsPage /> },
                     { path: 'project_access', element: <ScreenAccessPage /> },
                     { path: 'user_role_access', element: <RoleAccessPage /> },
-                    { path: 'access_assign_role', element: <AccessAssignRollPage /> },
+                   // { path: 'access_assign_role', element: <AccessAssignRollPage /> },
                     { path: 'access_assign_user', element: <AccessAssignUserPage /> },
                     { path: 'user_division_access', element: <UserDivisionAccessPage /> },
                     // { path: 'report_master', element: <Report /> },

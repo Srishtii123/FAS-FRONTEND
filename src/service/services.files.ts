@@ -544,86 +544,86 @@ class FileUploadService {
     }
   };
 
-  downloadAllAttachmentsWithAxios = async (request_number: string) => {
-    try {
-      console.log('Downloading all attachments with axios for:', request_number);
+  // downloadAllAttachmentsWithAxios = async (request_number: string) => {
+  //   try {
+  //     console.log('Downloading all attachments with axios for:', request_number);
 
-      const response = await axiosServices.get(`/api/files/downloadAllAttachments/${request_number}`, {
-        responseType: 'blob',
-        timeout: 30000, // 30 second timeout
-        onDownloadProgress: (progressEvent) => {
-          const percentCompleted = Math.round((progressEvent.loaded * 100) / (progressEvent.total || 1));
-          console.log(`Download progress: ${percentCompleted}%`);
-        }
-      });
+  //     const response = await axiosServices.get(`/api/files/downloadAllAttachments/${request_number}`, {
+  //       responseType: 'blob',
+  //       timeout: 30000, // 30 second timeout
+  //       onDownloadProgress: (progressEvent) => {
+  //         const percentCompleted = Math.round((progressEvent.loaded * 100) / (progressEvent.total || 1));
+  //         console.log(`Download progress: ${percentCompleted}%`);
+  //       }
+  //     });
 
-      console.log('Axios response status:', response.status);
+  //     console.log('Axios response status:', response.status);
 
-      if (response.status === 200) {
-        const blob = new Blob([response.data], {
-          type: response.headers['content-type']
-        });
+  //     if (response.status === 200) {
+  //       const blob = new Blob([response.data], {
+  //         type: response.headers['content-type']
+  //       });
 
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `attachments_${request_number}.zip`;
+  //       const url = window.URL.createObjectURL(blob);
+  //       const link = document.createElement('a');
+  //       link.href = url;
+  //       link.download = `attachments_${request_number}.zip`;
 
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       document.body.removeChild(link);
 
-        // Clean up
-        window.URL.revokeObjectURL(url);
+  //       // Clean up
+  //       window.URL.revokeObjectURL(url);
 
-        dispatch(
-          openSnackbar({
-            open: true,
-            message: 'Download started successfully',
-            variant: 'alert',
-            alert: {
-              color: 'success'
-            },
-            close: true
-          })
-        );
+  //       dispatch(
+  //         openSnackbar({
+  //           open: true,
+  //           message: 'Download started successfully',
+  //           variant: 'alert',
+  //           alert: {
+  //             color: 'success'
+  //           },
+  //           close: true
+  //         })
+  //       );
 
-        return true;
-      } else {
-        throw new Error(`Download failed with status: ${response.status}`);
-      }
-    } catch (error: any) {
-      console.error('Error in downloadAllAttachmentsWithAxios:', error);
+  //       return true;
+  //     } else {
+  //       throw new Error(`Download failed with status: ${response.status}`);
+  //     }
+  //   } catch (error: any) {
+  //     console.error('Error in downloadAllAttachmentsWithAxios:', error);
 
-      let errorMessage = 'Failed to download attachments';
-      if (error.response) {
-        // The request was made and the server responded with a status code
-        console.error('Error response:', error.response.status, error.response.data);
-        errorMessage = `Server error: ${error.response.status}`;
-      } else if (error.request) {
-        // The request was made but no response was received
-        console.error('No response received:', error.request);
-        errorMessage = 'No response from server. Check if backend is running.';
-      } else {
-        // Something happened in setting up the request
-        errorMessage = error.message;
-      }
+  //     let errorMessage = 'Failed to download attachments';
+  //     if (error.response) {
+  //       // The request was made and the server responded with a status code
+  //       console.error('Error response:', error.response.status, error.response.data);
+  //       errorMessage = `Server error: ${error.response.status}`;
+  //     } else if (error.request) {
+  //       // The request was made but no response was received
+  //       console.error('No response received:', error.request);
+  //       errorMessage = 'No response from server. Check if backend is running.';
+  //     } else {
+  //       // Something happened in setting up the request
+  //       errorMessage = error.message;
+  //     }
 
-      dispatch(
-        openSnackbar({
-          open: true,
-          message: errorMessage,
-          variant: 'alert',
-          alert: {
-            color: 'error'
-          },
-          close: true
-        })
-      );
+  //     dispatch(
+  //       openSnackbar({
+  //         open: true,
+  //         message: errorMessage,
+  //         variant: 'alert',
+  //         alert: {
+  //           color: 'error'
+  //         },
+  //         close: true
+  //       })
+  //     );
 
-      throw error;
-    }
-  };
+  //     throw error;
+  //   }
+  // };
 
   // Download single file
   downloadSingleFile = async (file: any) => {
@@ -681,66 +681,66 @@ class FileUploadService {
   };
 
   // Alternative: Download single file using axios (for better error handling)
-  downloadSingleFileWithAxios = async (file: any) => {
-    try {
-      const { request_number, sr_no, attachment_sr_no, user_file_name, org_file_name } = file;
+  // downloadSingleFileWithAxios = async (file: any) => {
+  //   try {
+  //     const { request_number, sr_no, attachment_sr_no, user_file_name, org_file_name } = file;
 
-      const fileName = user_file_name || org_file_name;
+  //     const fileName = user_file_name || org_file_name;
 
-      // Build the download URL
-      let downloadUrl = `/api/files/downloadSingleFile/${request_number}`;
-      if (sr_no !== undefined && sr_no !== null) {
-        downloadUrl += `/${sr_no}`;
-        if (attachment_sr_no !== undefined && attachment_sr_no !== null) {
-          downloadUrl += `/${attachment_sr_no}`;
-        }
-      }
+  //     // Build the download URL
+  //     let downloadUrl = `/api/files/downloadSingleFile/${request_number}`;
+  //     if (sr_no !== undefined && sr_no !== null) {
+  //       downloadUrl += `/${sr_no}`;
+  //       if (attachment_sr_no !== undefined && attachment_sr_no !== null) {
+  //         downloadUrl += `/${attachment_sr_no}`;
+  //       }
+  //     }
 
-      // Use axios to download with better error handling
-      const response = await axiosServices.get(downloadUrl, {
-        responseType: 'blob'
-      });
+  //     // Use axios to download with better error handling
+  //     const response = await axiosServices.get(downloadUrl, {
+  //       responseType: 'blob'
+  //     });
 
-      if (response.status === 200) {
-        // Create blob from response
-        const blob = new Blob([response.data], {
-          type: response.headers['content-type']
-        });
+  //     if (response.status === 200) {
+  //       // Create blob from response
+  //       const blob = new Blob([response.data], {
+  //         type: response.headers['content-type']
+  //       });
 
-        // Create download link
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = fileName;
+  //       // Create download link
+  //       const url = window.URL.createObjectURL(blob);
+  //       const link = document.createElement('a');
+  //       link.href = url;
+  //       link.download = fileName;
 
-        // Append to body, click, and remove
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+  //       // Append to body, click, and remove
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       document.body.removeChild(link);
 
-        // Clean up
-        window.URL.revokeObjectURL(url);
+  //       // Clean up
+  //       window.URL.revokeObjectURL(url);
 
-        console.log(`Downloaded single file via axios: ${fileName}`);
-      } else {
-        throw new Error('Failed to download file');
-      }
-    } catch (error) {
-      console.error('Error in downloadSingleFileWithAxios:', error);
-      dispatch(
-        openSnackbar({
-          open: true,
-          message: 'Failed to download file',
-          variant: 'alert',
-          alert: {
-            color: 'error'
-          },
-          close: true
-        })
-      );
-      throw error;
-    }
-  };
+  //       console.log(`Downloaded single file via axios: ${fileName}`);
+  //     } else {
+  //       throw new Error('Failed to download file');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error in downloadSingleFileWithAxios:', error);
+  //     dispatch(
+  //       openSnackbar({
+  //         open: true,
+  //         message: 'Failed to download file',
+  //         variant: 'alert',
+  //         alert: {
+  //           color: 'error'
+  //         },
+  //         close: true
+  //       })
+  //     );
+  //     throw error;
+  //   }
+  // };
 
   // Get download statistics for a request
   getDownloadStats = async (request_number: string) => {

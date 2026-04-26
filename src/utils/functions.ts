@@ -1,7 +1,7 @@
 import { SortingState } from '@tanstack/react-table';
 import { ISearch } from 'components/filters/SearchFilter';
 import { Dayjs } from 'dayjs';
-import { TTreeItem } from 'pages/Finance/AcTreeFinancePage';
+//import { TTreeItem } from 'pages/Finance/AcTreeFinancePage';
 import { dispatch } from 'store';
 import { openSnackbar } from 'store/reducers/snackbar';
 import { AuthProps } from 'types/auth';
@@ -112,23 +112,23 @@ export const titleCase = (sentence: string) => {
     })
     ?.join(' ');
 };
-export function convertTreeToReverseHierarchy(tree: TTreeItem[]): { [key: string]: string[] } {
-  const reverseHierarchy: { [key: string]: string[] } = {};
+// export function convertTreeToReverseHierarchy(tree: TTreeItem[]): { [key: string]: string[] } {
+//   const reverseHierarchy: { [key: string]: string[] } = {};
 
-  function traverseTree(node: TTreeItem, parentLabels: string[]) {
-    reverseHierarchy[node.id] = [...parentLabels, node.label];
+//   function traverseTree(node: TTreeItem, parentLabels: string[]) {
+//     reverseHierarchy[node.id] = [...parentLabels, node.label];
 
-    for (const child of node.children) {
-      traverseTree(child, [...parentLabels, node.label]);
-    }
-  }
+//     for (const child of node.children) {
+//       traverseTree(child, [...parentLabels, node.label]);
+//     }
+//   }
 
-  tree.forEach((node) => {
-    traverseTree(node, []);
-  });
+//   tree.forEach((node) => {
+//     traverseTree(node, []);
+//   });
 
-  return reverseHierarchy;
-}
+//   return reverseHierarchy;
+// }
 export const handleFilterChange = (value: ISearch['search'], setFilterData: (value: React.SetStateAction<ISearch>) => void) => {
   setFilterData((prevData) => {
     return {

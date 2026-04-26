@@ -9,7 +9,7 @@ import UniversalDialog from 'components/popup/UniversalDialog';
 import useAuth from 'hooks/useAuth';
 import { useMemo, useState, useCallback } from 'react';
 import { useLocation } from 'react-router';
-import WmsSerivceInstance from 'service/wms/service.wms';
+//import WmsSerivceInstance from 'service/wms/service.wms';
 import { useSelector } from 'store';
 import { TUniversalDialogProps } from 'types/types.UniversalDialog';
 import { getPathNameList } from 'utils/functions';
@@ -20,6 +20,7 @@ import SecSerivceInstance from 'service/service.security';
 import AddSecLoginSecForm from 'components/forms/Security/AddSecLoginSecForm';
 import CustomAgGrid from 'components/grid/CustomAgGrid';
 import { ColDef } from 'ag-grid-community';
+import WmsSerivceInstance from 'service/wms/service.wms';
 
 // const filter: ISearch = {
 //   sort: { field_name: 'updated_at', desc: true },

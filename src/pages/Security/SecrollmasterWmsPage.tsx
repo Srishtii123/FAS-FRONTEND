@@ -6,7 +6,7 @@ import UniversalDialog from 'components/popup/UniversalDialog';
 import useAuth from 'hooks/useAuth';
 import { useMemo, useState, useCallback } from 'react';
 import { useLocation } from 'react-router';
-import WmsSerivceInstance from 'service/wms/service.wms';
+//import WmsSerivceInstance from 'service/wms/service.wms';
 import { useSelector } from 'store';
 import { TUniversalDialogProps } from 'types/types.UniversalDialog';
 import { getPathNameList } from 'utils/functions';
@@ -18,6 +18,7 @@ import AddSecRoleWmsForm from 'components/forms/Security/AddSecRoleSecForm';
 import CustomAgGrid from 'components/grid/CustomAgGrid';
 import { ColDef } from 'ag-grid-community';
 import { RowSelectionState } from '@tanstack/react-table';
+import WmsSerivceInstance from 'service/wms/service.wms';
 
 const SecrollmasterWmsPage = () => {
   //--------------constants----------
