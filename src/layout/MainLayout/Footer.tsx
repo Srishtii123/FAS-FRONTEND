@@ -23,6 +23,6 @@ const FooterWrapper = styled('div')(({ theme }) => ({
   }
 }));
 
-const Footer = () => <FooterWrapper>{`© 2025 Bayanat Technology All rights Reserved. Version 1.0.0.0`}</FooterWrapper>;
+const Footer = () => <FooterWrapper>{`© 2026 All right Techno. Version 1.0.0.0`}</FooterWrapper>;
 
 export default Footer;
