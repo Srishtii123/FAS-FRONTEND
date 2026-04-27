@@ -1,8 +1,8 @@
 import { AgGridReact } from 'ag-grid-react';
 import { ColDef } from 'ag-grid-community';
- import { useMemo } from 'react';
-// import 'ag-grid-community/styles/ag-theme-apline.css';
-// import 'ag-grid-community/styles/ag-grid.css';
+import { useMemo } from 'react';
+import 'ag-grid-community/styles/ag-theme-apline.css';
+import 'ag-grid-community/styles/ag-grid.css';
 
 export interface CustomAgGridProps {
   rowData: any[];

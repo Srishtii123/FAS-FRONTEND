@@ -1,19 +1,19 @@
-// import { CSSProperties } from 'react';
-// import { iconMapping } from 'utils/constants';
+import { CSSProperties } from 'react';
+import { iconMapping } from 'utils/constants';
 
-// type IconComponentProps = {
-//   icon: keyof typeof iconMapping;
+type IconComponentProps = {
+  icon: keyof typeof iconMapping;
 
-//   style?: CSSProperties;
-// };
+  style?: CSSProperties;
+};
 
-// const IconComponent = ({ icon, style }: IconComponentProps) => {
-//   const SelectedIcon = iconMapping[icon];
+const IconComponent = ({ icon, style }: IconComponentProps) => {
+  const SelectedIcon = iconMapping[icon];
 
-//   if (!SelectedIcon) return null;
+  if (!SelectedIcon) return null;
 
-//   return <></>;
-//   // return <SelectedIcon style={style} strokeWidth={1.5} />;
-// };
+  return <></>;
+  // return <SelectedIcon style={style} strokeWidth={1.5} />;
+};
 
-// export default IconComponent;
+export default IconComponent;
