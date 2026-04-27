@@ -6,12 +6,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider as ReduxProvider } from 'react-redux';
 
 // scroll bar
-import 'simplebar/dist/simplebar.css';
+// import 'simplebar/dist/simplebar.css';
 
 // apex-chart
-import 'assets/third-party/apex-chart.css';
-import 'assets/third-party/react-table.css';
-import './index.css';
+// import 'assets/third-party/apex-chart.css';
+// import 'assets/third-party/react-table.css';
+// import './index.css';
 
 // project import
 import App from './App';
