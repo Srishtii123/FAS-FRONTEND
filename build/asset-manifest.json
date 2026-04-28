@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.50a76a39.css",
+    "main.js": "/static/js/main.bedb77b7.js",
+    "static/js/678.e9f9a88b.chunk.js": "/static/js/678.e9f9a88b.chunk.js",
+    "static/js/910.572d2382.chunk.js": "/static/js/910.572d2382.chunk.js",
+    "static/js/859.aa641e28.chunk.js": "/static/js/859.aa641e28.chunk.js",
+    "static/js/869.a8a4f262.chunk.js": "/static/js/869.a8a4f262.chunk.js",
+    "static/js/849.a9227cc9.chunk.js": "/static/js/849.a9227cc9.chunk.js",
+    "static/js/352.f518f573.chunk.js": "/static/js/352.f518f573.chunk.js",
+    "static/js/4.61af53f1.chunk.js": "/static/js/4.61af53f1.chunk.js",
+    "static/js/923.ea97a2c7.chunk.js": "/static/js/923.ea97a2c7.chunk.js",
+    "static/js/19.dcab2c0d.chunk.js": "/static/js/19.dcab2c0d.chunk.js",
+    "static/js/260.e372f76d.chunk.js": "/static/js/260.e372f76d.chunk.js",
+    "static/js/685.355d4844.chunk.js": "/static/js/685.355d4844.chunk.js",
+    "static/js/62.ca898d8d.chunk.js": "/static/js/62.ca898d8d.chunk.js",
+    "static/js/833.7ced525b.chunk.js": "/static/js/833.7ced525b.chunk.js",
+    "static/media/segoeuithis.ttf": "/static/media/segoeuithis.a732fcf595dcf938faef.ttf",
+    "static/media/bayanatLogo.png": "/static/media/bayanatLogo.369ebb16dfa531f4cf62.png",
+    "static/media/codedthemes-logo.svg": "/static/media/codedthemes-logo.de6f43fc1a6929defc604ed2bdf77fdd.svg",
+    "static/media/img-soc1.svg": "/static/media/img-soc1.a0526d5a1b2b3ad224c35fedc8498601.svg",
+    "static/media/img-soc3.svg": "/static/media/img-soc3.c7e32ab183d3a3ab9296b56558562065.svg",
+    "index.html": "/index.html",
+    "static/media/img-soc2.svg": "/static/media/img-soc2.8931ba0f5ca8245dbc0684f455a56d44.svg"
+  },
+  "entrypoints": [
+    "static/css/main.50a76a39.css",
+    "static/js/main.bedb77b7.js"
+  ]
+}
