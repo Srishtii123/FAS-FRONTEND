@@ -113,7 +113,7 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--max-old-space-size=8192 react-scripts start",
+    "start": "cross-env HTTPS=true NODE_OPTIONS=--max-old-space-size=8192 react-scripts start",
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=12288 react-scripts build",
     "build_widget": "rimraf build",
     "test": "react-scripts test",
