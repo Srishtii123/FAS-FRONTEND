@@ -17,14 +17,14 @@
 //import VendorRegister from 'pages/VendorSystem/VendorRegister';
 // import VendorStatus from 'pages/VendorSystem/VendorStatus'
 // import VendorStatus from 'pages/VendorSystem/VendorStatus';
- //import Loadable from 'components/Loadable';
- //import CommonLayout from 'layout/CommonLayout';
- import MainLayout from 'layout/MainLayout';
- import AppSelectionPage from 'pages/AppSelection/AppSelectionPage';
+//import Loadable from 'components/Loadable';
+//import CommonLayout from 'layout/CommonLayout';
+import MainLayout from 'layout/MainLayout';
+import AppSelectionPage from 'pages/AppSelection/AppSelectionPage';
 // import AcTreeFinancePage from 'pages/Finance/AcTreeFinancePage';
 // import EmployeeHrPage from 'pages/HR/Masters/Employee/EmployeeHrPage';
 // //import ItemmasterPfPage from 'pages/Purchasefolder/ItemmasterPfpage';
- 
+
 // import DivisionWmsPage from 'pages/WMS/DivisionWmsPage';
 // import PrincipalWmsPage from 'pages/WMS/PrincipalWmsPage';
 // import SalesmanWmsPage from 'pages/WMS/SalesmanWmsPage';
@@ -135,24 +135,25 @@ import AuthGuard from 'utils/route-guard/AuthGuard';
 // import CustomerWmsPage from 'pages/WMS/CustomerWmsPage';
 // import StockAdjustmentPage from 'pages/Transfer/StockAdjustment/StockAdjustmentPage';
 // import StockAdjustmentViewPage from 'pages/Transfer/StockAdjustment/view/[adj_no]';
- import AttendanceMarking from 'pages/Attendance/Request/AttendanceMarking';
- import ProxyLog from 'pages/Attendance/Request/ProxyLogsAdmin';
- import EmployeeListing from 'pages/Attendance/Employee/EmployeeListing'; import AttendancePage from 'pages/Attendance/AttendancePage';
- import AttendanceRequestPage from 'pages/Attendance/Request/AttendanceRequestPage';
- import AttendanceRequestsAdmin from 'pages/Attendance/Request/AttendanceRequestsAdmin';
+import AttendanceMarking from 'pages/Attendance/Request/AttendanceMarking';
+import ProxyLog from 'pages/Attendance/Request/ProxyLogsAdmin';
+import EmployeeListing from 'pages/Attendance/Employee/EmployeeListing';
+import AttendancePage from 'pages/Attendance/AttendancePage';
+import AttendanceRequestPage from 'pages/Attendance/Request/AttendanceRequestPage';
+import AttendanceRequestsAdmin from 'pages/Attendance/Request/AttendanceRequestsAdmin';
 
- import CompanymasterPage from 'pages/Security/CompanymasterPage';
- import QueryMasterPage from 'pages/Security/QueryMasterPage';
- import ScreenAccessPage from 'pages/Security/ScreenAccessPage';
+import CompanymasterPage from 'pages/Security/CompanymasterPage';
+import QueryMasterPage from 'pages/Security/QueryMasterPage';
+import ScreenAccessPage from 'pages/Security/ScreenAccessPage';
 import RoleAccessPage from 'pages/Security/UserRoleAccessPage';
 //import AccessAssignRollPage from 'pages/Security/AccessAssignRollPage';
 import AccessAssignUserPage from 'pages/Security/AccessAssignUserPage';
 import UserDivisionAccessPage from 'pages/Security/UserDivisionAccessPage';
 //import Report from 'pages/Security/ReportMasterPage';
 import SecrollmasterWmsPage from 'pages/Security/SecrollmasterWmsPage';
- import FlowmasterSecPage from 'pages/Security/flowmaster-sec.types';
- import SecmasterWmsPage from 'pages/Security/secmasterWmsPage';
- import SecmodulemasterWmsPage from 'pages/Security/secmodulemasterWmsPage';
+import FlowmasterSecPage from 'pages/Security/flowmaster-sec.types';
+import SecmasterWmsPage from 'pages/Security/secmasterWmsPage';
+import SecmodulemasterWmsPage from 'pages/Security/secmodulemasterWmsPage';
 
 // //import KpiItemPage from 'pages/Pams/KpiItemPage';
 // import InvoiceMasterPage from 'pages/Billing/InvoiceMasterPage';
@@ -564,14 +565,14 @@ const MainRoutes = {
                     { path: 'sec_module_data', element: <SecmodulemasterWmsPage /> },
                     { path: 'project_access', element: <ScreenAccessPage /> },
                     { path: 'user_role_access', element: <RoleAccessPage /> },
-                   // { path: 'access_assign_role', element: <AccessAssignRollPage /> },
+                    // { path: 'access_assign_role', element: <AccessAssignRollPage /> },
                     { path: 'access_assign_user', element: <AccessAssignUserPage /> },
                     { path: 'user_division_access', element: <UserDivisionAccessPage /> },
                     // { path: 'report_master', element: <Report /> },
                     // { path: '*', element: <MaintenanceError /> },
                     { path: 'query_master', element: <QueryMasterPage /> }
                   ]
-                },
+                }
                 // {
                 //   path: '*',
                 //   element: <MaintenanceComingSoon /> // Coming soon page
@@ -1113,13 +1114,13 @@ const MainRoutes = {
               ]
             }
           ]
-        },
+        }
         // {
         //   path: '*',
         //   element: <MaintenanceComingSoon />
         // }
       ]
-    },
+    }
     // {
     //   path: '/maintenance',
     //   element: <CommonLayout />,
